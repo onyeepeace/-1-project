@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left section */
+
+.left-section {
+    background-color: rgb(7, 4, 4) !important;
+}
+
+#hero-image {
+    height: 70vh;
+    background-image: url(images/me-remove.png);
+    border: rgb(7, 4, 4);
+    box-shadow: 25px 25px 50px 0 rgb(7, 4, 4) inset, -25px -25px 50px 0 rgb(7, 4, 4) inset;
+    width: 70%;
+    margin: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.text{
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    background-color: #fdfd7e;
+    color: #999999;
+}
+
+.contact:hover{
+    background: none;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+/* Social Media links */
+.social-links {
+    text-align: end;
+    padding-bottom: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fdfd7e;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+}
+
+/* Right section */
+
+.right-section {
+    padding: 20px;
+}
+
+/* About me */
+#about-me p {
+    padding: 20px 0 30px;
+}
+
+#about-me h2 {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #999999;
+    background: #fdfd7e;
+    padding: 0 20px;
+}
+
+/* Work */
+#work ul {
+    padding-top: 10px;
+}
+
+#work h2 {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #999999;
+    background: #fdfd7e;
+    padding: 0 20px;
+}
+
+.date {
+    color: #696968;
+    padding: 5px 0 30px;
+    font-weight: bold;
+}
+
+h3 {
+    padding-top: 20px;
+    font-weight: bold;
+    color: #696968;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-bottom: 15px;
+}
+
+/* Education */
+#education {
+    padding-top: 20px;
+}
+
+#education h2 {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #999999;
+    background: #fdfd7e;
+    padding: 0 20px;
+}
+
+/* Hire Me */
+#hire-me {
+    text-align: center;
+}
+
+#hire-me h3 {
+    padding: 0 0 20px;
+    text-transform: uppercase;
+    color: #696968;
+    font-size: 14px;
+}
+
+.hire-me {
+    display: inline-block;
+    padding-top: 55px;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #999999;
+    border-radius: 25px;
+    background: none;
+    color: #999999;
+}
+
+.hire-me:hover {
+    background-color: #fdfd7e;
+    color: #999999;
+    border: none;
+}
+
+/* media queries */
+
+@media screen and (min-width: 800px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Left section */
+    #hero-image {
+        background-position: center;
+        background-size: contain;
+        margin-top: 50px;
+    }
+    
+    .text{
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        top: 75%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Social Media links */
+    .social-links {
+        position: absolute;
+        top: 95%;
+        right: 52%;
+    }
+
+    .right-section {
+        overflow-y: scroll;
+        height: 100vh;
+        padding: 0 40px;
+    }
+
+    .right-section::after, .right-section::before {
+        content:'';
+        display: block;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    /* Left section */
+    .contact {
+        padding: 5px 30px;
+        border-radius: 50px;
+    }
+    
+    .text {
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+    }
+
+    .text p {
+        padding-bottom: 5px;
+    }
+
+    .text button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        border-radius: 40px;
+    }
+
+    /* Social Media links */
+    .social-links a {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    /* Right section */
+    .right-section {
+        padding: 0 50px;
+    }
+
+    .right-section::after, .right-section::before {
+        padding: 30px;
+    }
+
+    section > h3 {
+        font-size: 1.5rem;
+        padding-top: 20px;
+    }
+
+    #about-me h2 {
+        font-size: 1.5rem;
+    }
+
+    /* About me */
+    #about-me p {
+        font-size: 1.2rem;
+        padding: 30px 0 50px;
+    }
+
+    /* Work */
+    #work h2 {
+        font-size: 1.5rem;
+    }
+
+    li {
+        padding-bottom: 20px;
+        font-size: 1.2rem;
+    }
+
+    .date {
+        font-size: 1.2rem;
+        padding: 0 0 20px;
+    }
+
+    /* Education */
+    #education {
+        padding-top: 30px;
+    }
+
+    #education h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Hire me */
+    #hire-me h3 {
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+
+    .hire-me {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        border-radius: 50px;
+    }
+}
+
+@media screen and (min-width:2000px) {
+    /* Left section */
+    .text {
+        font-size: 3rem;
+        line-height: 7rem;
+    }
+
+    .text p {
+        padding-bottom: 20px;
+    }
+
+    .text button {
+        font-size: 2.5rem;
+        padding: 25px 50px;
+        border-radius: 50px;
+    }
+
+    /* Social Media links */
+    .social-links a {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    /* Right section */
+    section > h3 {
+        font-size: 3rem;
+        padding-top: 50px;
+    }
+
+    /* About me */
+    #about-me h2 {
+        font-size: 3rem;
+    }
+
+    #about-me p {
+        font-size: 2.5rem;
+        padding: 50px 0 100px;
+    }
+
+    /* Work */
+    #work h2 {
+        font-size: 3rem;
+    }
+
+    li {
+        padding-bottom: 35px;
+        font-size: 2.5rem;
+    }
+
+    .date {
+        font-size: 2.5rem;
+        padding: 5px 0 50px;
+    }
+
+    /* Education */
+    #education {
+        padding-top: 50px;
+    }
+
+    #education h2 {
+        font-size: 3rem;
+    }
+
+    /* Hire me */
+    #hire-me h3 {
+        font-size: 3rem;
+        padding-bottom: 30px;
+    }
+
+    .hire-me {
+        font-size: 2.5rem;
+        padding: 15px 40px;
+        border-radius: 50px;
+    }
+}
